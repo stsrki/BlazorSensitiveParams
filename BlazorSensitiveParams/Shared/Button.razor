@@ -1,0 +1,10 @@
+﻿<button type="button" @attributes="@Attributes">@ChildContent</button>
+
+@code {
+    [Parameter] public int Width { get; set; }
+
+    [Parameter] public RenderFragment ChildContent { get; set; }
+
+    [Parameter( CaptureUnmatchedValues = true )]
+    public Dictionary<string, object> Attributes { get; set; }
+}
